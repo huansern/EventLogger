@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/settings_text_format_category">
+        <ListPreference
+            android:key="@string/settings_time_format_key"
+            android:title="@string/settings_time_format_title"
+            android:dialogTitle="@string/settings_time_format_dialog_title"
+            android:summary="%s"
+            android:positiveButtonText="@string/settings_time_format_positive"
+            android:negativeButtonText="@string/settings_time_format_negative"
+            android:entries="@array/time_format"
+            android:entryValues="@array/time_format_values"
+            android:defaultValue="@string/settings_time_format_default_value"/>
+
+        <ListPreference
+            android:key="@string/settings_date_format_key"
+            android:title="@string/settings_date_format_title"
+            android:dialogTitle="@string/settings_date_format_dialog_title"
+            android:summary="%s"
+            android:positiveButtonText="@string/settings_date_format_positive"
+            android:negativeButtonText="@string/settings_date_format_negative"
+            android:entries="@array/date_format"
+            android:entryValues="@array/date_format_value"
+            android:defaultValue="@string/settings_date_format_default_value"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/settings_service_status_catergory">
+        <SwitchPreference
+            android:key="@string/settings_service_key"
+            android:title="@string/settings_service_title"
+            android:defaultValue="true"
+            android:summaryOn="@string/settings_service_summary_on"
+            android:summaryOff="@string/settings_service_summary_off"
+            android:disableDependentsState="false" />
+
+        <MultiSelectListPreference
+            android:key="@string/settings_event_type_key"
+            android:title="@string/settings_event_type_title"
+            android:dialogTitle="@string/settings_event_type_dialog_title"
+            android:summary="@string/settings_event_type_summary"
+            android:positiveButtonText="@string/settings_event_type_positive"
+            android:negativeButtonText="@string/settings_event_type_negative"
+            android:entries="@array/log_type"
+            android:entryValues="@array/log_type_values"
+            android:defaultValue="@array/log_type_default_values"
+            android:dependency="@string/settings_service_key" />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="@string/settings_log_removal_category">
+        <!--<EditTextPreference
+            android:key="@string/settings_manual_purge_key"
+            android:title="@string/settings_manual_purge_title"
+            android:dialogTitle="@string/settings_manual_purge_dialog_title"
+            android:summary="@string/settings_manual_purge_summary"
+            android:positiveButtonText="@string/settings_manual_purge_positive"
+            android:negativeButtonText="@string/settings_manual_purge_negative"
+            android:defaultValue="@string/settings_manual_purge_default_value"
+            android:inputType="numberSigned"/>-->
+
+        <SwitchPreference
+            android:key="@string/settings_auto_purge_status_key"
+            android:title="@string/settings_auto_purge_status_title"
+            android:summary="@string/settings_auto_purge_status_summary"
+            android:defaultValue="true"
+            android:summaryOn="@string/settings_auto_purge_status_summary_on"
+            android:summaryOff="@string/settings_auto_purge_status_summary_off"
+            android:disableDependentsState="false" />
+
+        <ListPreference
+            android:key="@string/settings_auto_purge_key"
+            android:title="@string/settings_auto_purge_title"
+            android:dialogTitle="@string/settings_auto_purge_title"
+            android:summary="%s"
+            android:positiveButtonText="@string/settings_auto_purge_positive"
+            android:negativeButtonText="@string/settings_auto_purge_negative"
+            android:entries="@array/auto_purge_log"
+            android:entryValues="@array/auto_purge_log_values"
+            android:defaultValue="@string/settings_auto_purge_default_value"
+            android:dependency="@string/settings_auto_purge_status_key"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

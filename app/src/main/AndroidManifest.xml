@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.github.huansern.eventlogger">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".home.HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".settings.SettingsActivity"
+            android:theme="@style/SettingTheme"/>
+
+        <service android:name=".service.EventLoggingService"
+            android:label="@string/event_logging_service_label"
+            android:description="@string/event_logging_service_description"
+            android:icon="@drawable/ic_security"
+            android:exported="false" />
+
+        <service android:name=".service.AppUsageService"
+            android:exported="false" />
+
+        <receiver android:name=".broadcastreceiver.BootEvent"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWEROFF" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

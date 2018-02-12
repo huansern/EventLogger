@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="data"
+            type="com.github.huansern.eventlogger.data.EventLog" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_Primary">
+
+        <TextView
+            android:id="@+id/eventLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@{data.desc}"
+            android:textSize="10sp"
+            android:textColor="@color/color_Primary_Text"
+            android:gravity="center"
+            android:background="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12 Jan 2018"/>
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

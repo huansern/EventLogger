@@ -1,0 +1,108 @@
+<resources>
+
+    <string name="app_name">Event Logger</string>
+    <string name="action_service">Start Service</string>
+
+    <string name="action_refresh">Refresh</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_scroll_to_top">Scroll to the top</string>
+
+    <string name="shared_prefs">EL.DATA</string>
+    <string name="shared_prefs_last_screen_on_time">ACTION_SCREEN_ON</string>
+    <string name="shared_prefs_last_user_present_time">ACTION_USER_PRESENT</string>
+    <string name="shared_prefs_last_service_start_up_time">ACTION_SERVICE_STARTED</string>
+
+
+    <!-- Settings -->
+
+    <string name="settings_text_format_category">Text Formatting</string>
+
+    <string name="settings_time_format_key">Time_Format_Key</string>
+    <string name="settings_time_format_title">Time Format</string>
+    <string name="settings_time_format_dialog_title">Select a time format</string>
+    <string name="settings_time_format_default_value">hh:mm a</string>
+    <string name="settings_time_format_positive">Save</string>
+    <string name="settings_time_format_negative">Cancel</string>
+
+    <string name="settings_date_format_key">Date_Format_Key</string>
+    <string name="settings_date_format_title">Date Format</string>
+    <string name="settings_date_format_dialog_title">Select a date format</string>
+    <string name="settings_date_format_default_value">12/31/2017</string>
+    <string name="settings_date_format_positive">Save</string>
+    <string name="settings_date_format_negative">Cancel</string>
+
+    <string name="settings_service_status_catergory">Service</string>
+
+    <string name="settings_service_key">Service_Key</string>
+    <string name="settings_service_title">Service</string>
+    <string name="settings_service_dialog_title">Disable service will stop event logging. Proceed?</string>
+    <string name="settings_service_summary">Enable or disable service</string>
+    <string name="settings_service_summary_on">Logging device activity</string>
+    <string name="settings_service_summary_off">Stopped logging device activity</string>
+    <string name="settings_service_default_value">true</string>
+    <string name="settings_service_positive">Sure</string>
+    <string name="settings_service_negative">Cancel</string>
+
+    <string name="settings_event_type_key">Event_Type_Key</string>
+    <string name="settings_event_type_title">Log Type</string>
+    <string name="settings_event_type_dialog_title">Check which log type</string>
+    <string name="settings_event_type_summary">Summary</string>
+    <string name="settings_event_type_default_value">true</string>
+    <string name="settings_event_type_positive">Save</string>
+    <string name="settings_event_type_negative">Cancel</string>
+
+    <string name="settings_log_removal_category">Log Clean Up</string>
+
+    <string name="settings_manual_purge_key">Manual_Purge</string>
+    <string name="settings_manual_purge_title">Manually delete log</string>
+    <string name="settings_manual_purge_dialog_title">Delete logs older than…</string>
+    <string name="settings_manual_purge_summary">Delete logs older than…</string>
+    <string name="settings_manual_purge_default_value">0</string>
+    <string name="settings_manual_purge_positive">Delete</string>
+    <string name="settings_manual_purge_negative">Cancel</string>
+
+    <string name="settings_auto_purge_status_key">Auto_purge_status</string>
+    <string name="settings_auto_purge_status_title">Auto remove log</string>
+    <string name="settings_auto_purge_status_summary">Enable or disable automatic log removal</string>
+    <string name="settings_auto_purge_status_summary_on">Automatic log removal enabled</string>
+    <string name="settings_auto_purge_status_summary_off">Automatic log removal disabled</string>
+    <string name="settings_auto_purge_status_default_values">0</string>
+
+    <string name="settings_auto_purge_key">Auto_purge</string>
+    <string name="settings_auto_purge_title">Automatic log removal</string>
+    <string name="settings_auto_purge_dialog_title">Auto delete logs older than</string>
+    <string name="settings_auto_purge_summary">Automatically delete logs older than</string>
+    <string name="settings_auto_purge_default_value">30</string>
+    <string name="settings_auto_purge_positive">Save</string>
+    <string name="settings_auto_purge_negative">Cancel</string>
+
+    <!-- Misc -->
+    <string name="event_logging_service_label">Event Logger Service</string>
+    <string name="event_logging_service_description">Event Logger service to monitor device activity at real time.</string>
+
+    <string name="event_category_session">SESSION</string>
+    <string name="event_action_session_start">EL.session.start</string>
+    <string name="event_action_session_end">EL.session.end</string>
+    <string name="event_action_session_start_label">Session started</string>
+    <string name="event_action_session_end_label">Session ended</string>
+
+    <string name="event_category_service">SERVICE</string>
+    <string name="event_action_service_start">EL.service.start</string>
+    <string name="event_action_service_end">EL.service.end</string>
+    <string name="event_action_service_start_label">Started monitoring device activity</string>
+    <string name="event_action_service_end_label">Stopped monitoring device activity</string>
+
+    <string name="event_category_app">APP&#160;&#160;&#160;&#160;</string>
+    <string name="event_action_app">EL.APP</string>
+
+    <string name="event_category_boot">BOOT&#160;&#160;&#160;</string>
+    <string name="event_category_power">POWER&#160;&#160;</string>
+    <string name="event_category_lock">LOCK&#160;&#160;&#160;</string>
+    <string name="event_category_display">DISPLAY</string>
+    <string name="event_category_storage">STORAGE</string>
+
+    <string name="event_item_date">12 Jan 2018</string>
+    <string name="event_item_time">12:00 AM</string>
+    <string name="event_item_type">Time Zone</string>
+    <string name="event_item_desc">External storage unmounted. Possible unauthorized access?</string>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        
+        <variable
+            name="viewModel"
+            type="com.github.huansern.eventlogger.home.HomeViewModel" />
+
+        <variable
+            name="fragment"
+            type="com.github.huansern.eventlogger.home.HomeFragment" />
+
+
+        <variable
+            name="dateHeader"
+            type="android.databinding.ObservableField&lt;String&gt;" />
+        
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.github.huansern.eventlogger.home.HomeFragment"
+        tools:showIn="@layout/activity_home">
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@{dateHeader}"
+            android:visibility="visible"
+            android:textSize="12sp"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:background="@color/color_Primary"
+            android:elevation="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="12 Jan 2018"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeToRefresh"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:onRefreshListener="@{() -> viewModel.start()}"
+            app:refreshing="@{viewModel.dataLoadingProgress}">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/homeRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:scrollbarSize="@dimen/event_log_scrollbar_width"
+                android:scrollbarThumbVertical="@drawable/vertical_scrollbar"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <ImageButton
+            android:id="@+id/scrollToTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:alpha="0.9"
+            android:background="@drawable/circular_background"
+            android:contentDescription="@string/action_scroll_to_top"
+            android:elevation="1dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_up"
+            android:tint="@color/colorPrimaryDark"
+            android:visibility="@{viewModel.scrollToTopButtonVisibility}"
+            android:onClick="@{() -> fragment.scrollToTop()}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

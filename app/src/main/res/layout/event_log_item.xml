@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.github.huansern.eventlogger.data.EventLog" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_Primary">
+
+        <View
+            android:id="@+id/space"
+            android:layout_width="@dimen/event_log_item_side_label"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/eventTime"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/event_log_item_margin_side"
+            android:maxLines="1"
+            android:textSize="10sp"
+            android:text="@{data.getTimeText()}"
+            android:fontFamily="monospace"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/space"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="12:34:56" />
+
+        <TextView
+            android:id="@+id/eventType"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/event_log_item_margin_side"
+            android:maxLines="1"
+            android:textSize="10sp"
+            android:text="@{data.category}"
+            android:fontFamily="monospace"
+            android:typeface="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eventTime"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="STORAGE" />
+
+        <TextView
+            android:id="@+id/eventDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/event_log_item_margin_side"
+            android:maxLines="2"
+            android:textSize="10sp"
+            android:text="@{data.desc}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/eventType"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="External SD card has been unmounted." />
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

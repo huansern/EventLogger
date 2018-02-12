@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="time_format">
+        <item>11:59:59 PM</item>
+        <item>11:59 PM</item>
+        <item>23:59:59</item>
+        <item>23:59</item>
+    </string-array>
+
+    <string-array name="time_format_values">
+        <item>hh:mm:ss a</item>
+        <item>hh:mm a</item>
+        <item>HH:mm:ss</item>
+        <item>HH:mm</item>
+    </string-array>
+
+    <string-array name="date_format">
+        <item>Sun, 31 Dec 2017</item>
+        <item>Dec 31, 2017</item>
+        <item>31/12/2017</item>
+        <item>12/31/2017</item>
+    </string-array>
+
+    <string-array name="date_format_value">
+        <item>Sun, 31 Dec 2017</item>
+        <item>Dec 31, 2017</item>
+        <item>31/12/2017</item>
+        <item>12/31/2017</item>
+    </string-array>
+
+
+    <string-array name="log_type">
+        <item>BOOT</item>
+        <item>LOCK</item>
+        <item>Display</item>
+        <item>Power</item>
+        <item>External Storage</item>
+    </string-array>
+
+    <string-array name="log_type_values">
+        <item>BOOT</item>
+        <item>LOCK</item>
+        <item>DISPLAY</item>
+        <item>POWER</item>
+        <item>STORAGE</item>
+    </string-array>
+
+    <string-array name="log_type_default_values">
+        <item>on</item>
+        <item>on</item>
+        <item>on</item>
+        <item>on</item>
+        <item>on</item>
+    </string-array>
+
+
+    <string-array name="manual_purge_log">
+        <item>1 Day</item>
+        <item>3 Days</item>
+        <item>1 Week</item>
+        <item>15 Days</item>
+        <item>1 Month</item>
+    </string-array>
+
+    <string-array name="manual_purge_log_values">
+        <item>1</item>
+        <item>3</item>
+        <item>7</item>
+        <item>15</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="auto_purge_log">
+        <item>1 Day</item>
+        <item>1 Week</item>
+        <item>1 Month</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string-array name="auto_purge_log_values">
+        <item>1</item>
+        <item>7</item>
+        <item>30</item>
+        <item>0</item>
+    </string-array>
+
+</resources>

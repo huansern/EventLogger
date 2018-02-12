@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="data"
+            type="com.github.huansern.eventlogger.data.EventLog" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_Primary">
+
+        <View
+            android:id="@+id/leftLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/event_log_item_margin_side"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/eventLabel"
+            android:background="@color/colorAccent"/>
+
+        <TextView
+            android:id="@+id/eventLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/event_log_item_margin_side"
+            android:layout_marginEnd="@dimen/event_log_item_margin_side"
+            android:background="@color/color_Primary"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@{data.desc}"
+            android:textColor="@color/color_Primary_Text"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/rightLine"
+            app:layout_constraintStart_toEndOf="@id/leftLine"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Session #2830 started" />
+
+        <View
+            android:id="@+id/rightLine"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/event_log_item_margin_side"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/eventLabel"
+            android:background="@color/colorAccent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

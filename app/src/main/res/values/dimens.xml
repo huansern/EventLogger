@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="event_log_scrollbar_width">2dp</dimen>
+    <dimen name="event_log_scrollbar_radius">1dp</dimen>
+
+    <dimen name="event_log_item_height">16dp</dimen>
+    <dimen name="event_log_item_margin_top">2dp</dimen>
+    <dimen name="event_log_item_margin_side">4dp</dimen>
+
+    <dimen name="event_log_item_side_label">4dp</dimen>
+</resources>

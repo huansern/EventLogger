@@ -1,0 +1,44 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_Primary</item>
+        <item name="colorPrimaryDark">@color/color_Primary_Dark</item>
+        <item name="colorAccent">@color/color_Secondary</item>
+
+        <item name="android:statusBarColor">@color/color_Primary_Dark</item>
+
+        <item name="android:windowBackground">@color/color_Primary</item>
+        <item name="android:colorBackground">@color/color_Primary</item>
+
+        <item name="android:navigationBarColor">@color/color_Primary_Dark</item>
+
+        <item name="android:textColor">@color/color_Primary_Text</item>
+        <item name="android:textColorPrimary">@color/color_Primary_Text</item>
+        <item name="android:textColorSecondary">@color/color_Secondary_Text</item>
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:actionMenuTextColor">@color/color_black</item>
+
+    </style>
+
+    <style name="SettingTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+
+        <item name="colorAccent">@color/color_Secondary</item>
+
+    </style>
+
+</resources>
